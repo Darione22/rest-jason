@@ -20,10 +20,10 @@ public class rest_js
 {
     public static void main(String[] args) 
         {
-             post pippo = new post();
-        pippo.post();
-        get tizzio = new get();
-        tizzio.get();
+        post restpost = new post();
+        restpost.post();
+        get restget = new get();
+        restget.get();
        
         }
     }
