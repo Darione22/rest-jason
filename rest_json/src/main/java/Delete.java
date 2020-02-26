@@ -17,8 +17,8 @@ public class Delete
         {
 
 	  try {
-
-		URL url = new URL("http://localhost:8080/api/tutorial/1.0/employees" + this.id);
+              
+		URL url = new URL("http://localhost:8080/api/tutorial/1.0/employees/1"/* + this.id*/);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("DELETE");
 		conn.setRequestProperty("Accept:", "*/*");

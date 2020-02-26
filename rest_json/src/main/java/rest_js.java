@@ -20,7 +20,9 @@ public class rest_js
 {
     public static void main(String[] args) 
     {
+        get restget = new get();
+        restget.get();
         Delete restDelete = new Delete(1);
         restDelete.Delete();
-    }
+    }   
 }
