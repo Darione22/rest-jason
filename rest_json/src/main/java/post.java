@@ -35,13 +35,8 @@ public class post
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type", "application/json");
 
-		String input = "{ \\ \n" +
-                               "   \"employeeId\":" + this.Id +
-                               "   \"firstName\":" + this.Nome +
-                               "   \"lastName\":" + this.Cognome +
-                               "   \"email\":" + this.Email +
-                               "   \"phone\":" + this.Telefono +
-                               " }";
+                //"{\"qty\":100,\"name\":\"iPad 4\"}";
+		String input = "{\"employeeId\":"+ this.Id+", \"firstName\": \""+ this.Nome +"\", \"lastName\": \""+ this.Cognome +"\", \"email\": \""+ this.Email+ "\", \"phone\": \""+ this.Telefono +"\"}";
 
 		OutputStream os = conn.getOutputStream();
 		os.write(input.getBytes());
