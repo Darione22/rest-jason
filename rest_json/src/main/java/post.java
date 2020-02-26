@@ -10,10 +10,18 @@ import java.lang.String;
 public class post 
 {
     int Id = 10;
-    String Nome = "pippo";
-    String Cognome = "pluto";
-    String Email = "Email";
-    String Telefono = "123456";
+    String Nome;
+    String Cognome;
+    String Email;
+    String Telefono;
+    post(int id1, String Nome1, String Cognome1, String Email1, String Telefono1)
+    {
+        this.Id = id1;
+        this.Nome = Nome1;
+        this.Cognome = Cognome1;
+        this.Email= Email1;
+        this.Telefono = Telefono1;
+    }
     
 	// http://localhost:8080/api/tutorial/1.0/employees
 	public void post()
@@ -33,13 +41,14 @@ public class post
                                "   \"lastName\":" + this.Cognome +
                                "   \"email\":" + this.Email +
                                "   \"phone\":" + this.Telefono +
-                               " }'";
+                               " }";
 
 		OutputStream os = conn.getOutputStream();
 		os.write(input.getBytes());
 		os.flush();
 
-		if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
+		if (conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) 
+                {
 			throw new RuntimeException("Failed : HTTP error code : "
 				+ conn.getResponseCode());
 		}
@@ -49,13 +58,12 @@ public class post
 
 		String output;
 		System.out.println("Output from Server .... \n");
-		while ((output = br.readLine()) != null) {
-			System.out.println(output);
-		}
+		while ((output = br.readLine()) != null) 
+                { System.out.println(output); }
 
 		conn.disconnect();
 
-	  } catch (MalformedURLException e) {
+            } catch (MalformedURLException e) {
 
 		e.printStackTrace();
 

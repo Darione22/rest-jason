@@ -20,10 +20,12 @@ public class rest_js
 {
     public static void main(String[] args) 
         {
-        post restpost = new post();
+        post restpost = new post(1, "sanzio", "panzetti", "panzetto.sanzio@hotmail.com", "055334469");
         restpost.post();
         get restget = new get();
         restget.get();
+        Delete restdelete = new Delete(1);
+        restdelete.Delete();
        
         }
     }

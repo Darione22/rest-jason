@@ -6,7 +6,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class get {
+public class get 
+{
 
 	// http://localhost:8080/api/tutorial/1.0/employees
 	public void get() 
